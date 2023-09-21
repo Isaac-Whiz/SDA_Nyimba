@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SDA Nyimba</string>
+    <string name="all_songs">All Hyms</string>
+    <string name="share">Share App</string>
+    <string name="support_project">Support Project</string>
+    <string name="about_us">About Us</string>
+    <string name="sda_nyimba">SDA Nyimba</string>
+    <string name="todo">TODO</string>
+    <string name="open_drawer">open_drawer</string>
+    <string name="drawer_closed">closed_drawer</string>
+
+</resources>

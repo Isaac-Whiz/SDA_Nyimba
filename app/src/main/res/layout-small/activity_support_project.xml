@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SupportProject">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txtSupport"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="serif"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSupport"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="serif"
+            android:text="Corrections"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtBtnSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSupport"
+            android:layout_marginLeft="220dp"
+            android:fontFamily="serif"
+            android:text="Donate"
+            android:textStyle="italic" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBtnSupport"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp">
+
+                <ImageButton
+                    android:id="@+id/btnCorrections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSupport"
+                    android:layout_marginLeft="8dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@mipmap/corect1"
+                    android:textAlignment="textStart"
+                    android:tooltipText="Corrections"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="3dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp">
+
+                <ImageButton
+                    android:id="@+id/btnDonate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSupport"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/btnCorrections"
+                    android:backgroundTint="@color/white"
+                    android:src="@mipmap/donation"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="3dp" />
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    android:gravity="bottom"
+    android:paddingStart="10dp"
+    android:background="#2e6de7">
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/advent2"
+        android:id="@+id/drawerImage"
+        android:paddingStart="0dp"
+
+        android:contentDescription="@string/todo" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sda_nyimba"
+        android:textColor="@color/white"
+        android:paddingStart="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="serif"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

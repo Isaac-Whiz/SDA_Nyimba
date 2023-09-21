@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp"
+    tools:context=".SelectedHym">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtSelHymNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="serif"
+            android:text="No."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSelectedHymNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/txtSelHymNo"
+            android:fontFamily="serif"
+            android:hint="Test_Text"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtSelHymNo"
+            android:background="@color/white">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:id="@+id/txtDetailedHym"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="serif"
+                    android:textSize="18sp"
+                    android:hint="I am Lord the "
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

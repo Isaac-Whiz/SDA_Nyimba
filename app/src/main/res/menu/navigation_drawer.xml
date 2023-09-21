@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/allHyms"
+        android:fontFamily="serif"
+        android:icon="@mipmap/list"
+        android:textStyle="bold"
+        android:title="@string/all_songs" />
+    <item
+        android:id="@+id/supportProject"
+        android:fontFamily="serif"
+        android:icon="@mipmap/solidarity"
+        android:textStyle="bold"
+        android:title="@string/support_project" />
+    <item
+        android:id="@+id/userPolicy"
+        android:fontFamily="serif"
+        android:icon="@mipmap/share"
+        android:textStyle="bold"
+        android:title="@string/share" />
+
+    <item
+        android:id="@+id/aboutUs"
+        android:fontFamily="serif"
+        android:icon="@mipmap/group"
+        android:textStyle="bold"
+        android:title="@string/about_us" />
+</menu>
