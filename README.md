@@ -1,7 +1,7 @@
 <p>
 <h1 align="center">
   <br>
-<img src="https://th.bing.com/th?id=OIP.rFfNvP-kDauBj_AsaLHbUwHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2" alt="SDA Nyimba" width="200">
+<img src="https://github.com/Isaac-Whiz/SDA_Nyimba/assets/95527627/d5cfb6a5-b575-44d0-9e9a-747f4160cc1e" alt="SDA Nyimba" width="200">
   <br>
   SDA Nyimba
   <br>
