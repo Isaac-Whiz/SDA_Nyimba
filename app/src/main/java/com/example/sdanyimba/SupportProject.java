@@ -1,18 +1,18 @@
 package com.example.sdanyimba;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SupportProject extends AppCompatActivity {
     private ImageButton btnCorrections, btnDonate;
     private TextView txtSupportProject;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class SupportProject extends AppCompatActivity {
         setContentView(R.layout.activity_support_project);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         initViews();
-        btnDonate.setOnClickListener(view -> Toast.makeText(SupportProject.this, "Covered in the upcoming update.", Toast.LENGTH_SHORT).show());
+
         btnCorrections.setOnClickListener(view -> {
             String subject = "About the Nyimba SDA project";
             String recepient = "ssekajjawavamuno@gmail.com";

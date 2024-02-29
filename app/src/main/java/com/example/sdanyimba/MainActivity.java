@@ -1,31 +1,23 @@
 package com.example.sdanyimba;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowMetrics;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
@@ -46,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
-//        scaleViewWindow();
-//        setSupportActionBar(toolbar);
          ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.open_drawer, R.string.drawer_closed);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
@@ -55,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.allHyms) {
-                startActivity(new Intent(getApplicationContext(), all_hmys.class)
+                startActivity(new Intent(getApplicationContext(), AllHyms.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
                 return true;
             }
@@ -72,7 +62,12 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
             else if (itemId == R.id.userPolicy) {
-                Toast.makeText(this, "Covered in the upcoming update.", Toast.LENGTH_SHORT).show();
+                String url = "https://drive.google.com/drive/folders/131W2SklMSACfh2koG9Bcx0tVLs6NgtVO?usp=sharing";
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, url);
+                sendIntent.setType("text/plain");
+                startActivity(Intent.createChooser(sendIntent, "Share app download link"));
                 return true;
             }
         return false;
@@ -81,53 +76,6 @@ public class MainActivity extends AppCompatActivity {
         //Call the button clicks method
         buttonClick();
     }
-    private void scaleViewWindow() {
-        ViewGroup group = drawer;
-        group.addView(new View(this) {
-            @Override
-            protected void onConfigurationChanged(Configuration newConfig) {
-                super.onConfigurationChanged(newConfig);
-                computeWindowSizeClasses();
-            }
-        });
-        computeWindowSizeClasses();
-    }
-
-    private void computeWindowSizeClasses() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
-            WindowMetrics metrics = getWindowManager().getCurrentWindowMetrics();
-
-            float widthDp = metrics.getBounds().width() / getResources().getDisplayMetrics().density;
-            WindowSizeClass widthWindowSizeClass;
-
-            if (widthDp < 600f) {
-                widthWindowSizeClass = WindowSizeClass.COMPACT;
-            } else if (widthDp < 840f) {
-                widthWindowSizeClass = WindowSizeClass.MEDIUM;
-            } else {
-                widthWindowSizeClass = WindowSizeClass.EXPANDED;
-            }
-            float heightDp = metrics.getBounds().height() / getResources().getDisplayMetrics().density;
-
-            WindowSizeClass heightWindowSizeClass;
-
-            if (heightDp < 480f) {
-                heightWindowSizeClass = WindowSizeClass.COMPACT;
-            } else if (heightDp < 900f) {
-                heightWindowSizeClass = WindowSizeClass.MEDIUM;
-            } else {
-                heightWindowSizeClass = WindowSizeClass.EXPANDED;
-            }
-        }
-    }
-
-    private enum WindowSizeClass {
-        COMPACT,
-        EXPANDED,
-        MEDIUM
-    }
-
-
     private boolean isNetworkAvailable(Context context){
         ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (manager != null){
@@ -183,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnGo.setOnClickListener(view -> {
             if (txtSearch.getText().equals("")) {
-                startActivity(new Intent(MainActivity.this, all_hmys.class)
+                startActivity(new Intent(MainActivity.this, AllHyms.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
             } else {
                 int input = Integer.parseInt(txtSearch.getText().toString());
@@ -232,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnAll.setOnClickListener(view -> {
-            startActivity(new Intent(getApplicationContext(), all_hmys.class)
+            startActivity(new Intent(getApplicationContext(), AllHyms.class)
                     .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
         });
     }

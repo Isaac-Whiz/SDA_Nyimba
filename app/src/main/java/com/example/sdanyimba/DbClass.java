@@ -871,7 +871,11 @@ public class DbClass extends SQLiteOpenHelper {
                "Era akuwe eddembe,\n" +
                "Akuyise mu mayengo,\n" +
                "Akutuse mu kisulo kyo.'),"+
-               "(51,'Holy Holy','The lord makes a way where there is no way'),"+
+               "(51,'Ggwe Yesu Oli Wange...','Ggwe Yesu oli wange ddala, \n Ggwe wekka gwe ekitiibwa kyange; \n " +
+               "Ndi mukisa w’obulokozi, \n Nagulibwa na musaayi ggwo. \n\n Chorus: \n Nze nakuyimbiranga Yesu \n Nga nkutundereza bulijjo; \n" +
+               "Nze nakuyimbiranga Yesu, \n Nga nkutendereza bulijo; \n\n Nze ndi wuwo era nsanyuka nga nnenger(a) essanyu lyo lyonna;" +
+               "\n Bamalayika bo nga bajja, \n Nga bandaga okwagala kwo; \n\n Mu ggwe nnina ekiwummulo, \n Njijudd(e) essanyu lyo eringi;" +
+               "\n Nyimusibwa mu mwoyo ggwange \n Ntadde essuubi lyonna mu ggwe.'),"+
                "(52,'Mpa Ekitabo Ekitukuvu…','Mpa ekitabo ekitukuv(u) ennyo,\n" +
                "kindag(a) ekkubo nze akooye nnyo;\n" +
                "Tewali kirobera kwaka kwakyo,\n" +

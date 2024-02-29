@@ -15,7 +15,7 @@
         <activity android:name=".SelectedHym"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".SupportProject" />
-        <activity android:name=".all_hmys"
+        <activity android:name=".AllHyms"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".MainActivity"

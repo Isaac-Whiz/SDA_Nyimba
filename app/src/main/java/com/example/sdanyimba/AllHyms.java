@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,9 +14,8 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
-public class all_hmys extends AppCompatActivity {
+public class AllHyms extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ScrollView scrollView;
     private HymRecAdapter adapter;
@@ -96,14 +94,14 @@ public class all_hmys extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(all_hmys.this, MainActivity.class)
+        startActivity(new Intent(AllHyms.this, MainActivity.class)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            startActivity(new Intent(all_hmys.this, MainActivity.class)
+            startActivity(new Intent(AllHyms.this, MainActivity.class)
                     .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
             return true;
         }

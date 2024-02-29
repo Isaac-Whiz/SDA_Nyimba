@@ -48,24 +48,21 @@
             android:text="Donate"
             android:textStyle="italic" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtBtnSupport"
-            android:layout_marginBottom="5dp"
-            android:orientation="horizontal">
+            android:layout_below="@id/txtBtnSupport">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                app:strokeColor="@color/black"
-                app:strokeWidth="2dp">
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:strokeColor="@color/black"-->
+<!--                app:strokeWidth="2dp">-->
 
                 <ImageButton
                     android:id="@+id/btnCorrections"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtSupport"
                     android:layout_marginLeft="8dp"
                     android:backgroundTint="@color/white"
                     android:src="@mipmap/corect1"
@@ -74,27 +71,25 @@
                     app:strokeColor="#000000"
                     app:strokeWidth="3dp" />
 
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                app:strokeColor="@color/black"
-                app:strokeWidth="2dp">
+<!--            </com.google.android.material.card.MaterialCardView>-->
+<!---->
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:strokeColor="@color/black"-->
+<!--                app:strokeWidth="2dp">-->
 
                 <ImageButton
                     android:id="@+id/btnDonate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtSupport"
-                    android:layout_marginLeft="15dp"
                     android:layout_toRightOf="@+id/btnCorrections"
                     android:backgroundTint="@color/white"
                     android:src="@mipmap/donation"
                     app:strokeColor="#000000"
                     app:strokeWidth="3dp" />
-            </com.google.android.material.card.MaterialCardView>
-        </androidx.appcompat.widget.LinearLayoutCompat>
+<!--            </com.google.android.material.card.MaterialCardView>-->
+        </RelativeLayout>
 
     </RelativeLayout>
 

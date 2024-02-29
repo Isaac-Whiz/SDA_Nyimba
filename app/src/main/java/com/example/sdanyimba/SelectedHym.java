@@ -59,7 +59,7 @@ public class SelectedHym extends AppCompatActivity {
                 startActivity(new Intent(this, MainActivity.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
             } else {
-                startActivity(new Intent(this, all_hmys.class)
+                startActivity(new Intent(this, AllHyms.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
             }
         }

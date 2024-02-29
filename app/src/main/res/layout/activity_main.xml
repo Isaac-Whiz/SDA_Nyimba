@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#4a4a4a"
-            android:elevation="10dp" />
+            android:elevation="@dimen/_10sdp" />
 
         <TextView
             android:id="@+id/txtError"
@@ -29,7 +29,7 @@
             android:fontFamily="serif"
             android:text="Enter hym from 1-250"
             android:textColor="@color/red"
-            android:textSize="10sp"
+            android:textSize="@dimen/_10sdp"
             android:textStyle="italic"
             android:visibility="invisible" />
 
@@ -38,214 +38,246 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtError"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             android:background="@color/white"
             android:fontFamily="serif"
-            android:padding="5dp"
+            android:padding="@dimen/_5sdp"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="50sp" />
-
-
+            android:textSize="@dimen/_50sdp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/allButtonsRelative"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
                 android:layout_below="@id/txtSearch"
                 android:layout_marginTop="0dp"
                 android:background="@mipmap/advent3">
 
-
-                <Button
-                    android:id="@+id/btn1"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="35dp"
-                    android:backgroundTint="@color/white"
-                    android:text="1"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.045"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    tools:ignore="MissingConstraints">
 
-                <Button
-                    android:id="@+id/btn2"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="16dp"
-                    android:text="2"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    app:backgroundTint="#FFFFFF"
-                    app:layout_constraintStart_toEndOf="@+id/btn1"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    <Button
+                        android:id="@+id/btn1"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="0dp"
+                        android:backgroundTint="@color/white"
+                        android:text="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.045"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
-                <Button
-                    android:id="@+id/btn3"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="16dp"
-                    android:text="3"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    app:backgroundTint="#FFFFFF"
-                    app:layout_constraintStart_toEndOf="@+id/btn2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    <Button
+                        android:id="@+id/btn2"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_40sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/btn1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
-                <Button
-                    android:id="@+id/btn4"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="35dp"
-                    android:text="4"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    app:backgroundTint="#FFFFFF"
+                    <Button
+                        android:id="@+id/btn3"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_40sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/btn2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linear2"
+                    app:layout_constraintTop_toBottomOf="@+id/linear1"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn1"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    tools:ignore="MissingConstraints">
+                    <Button
+                        android:id="@+id/btn4"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="0dp"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_40sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn1"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
-                <Button
-                    android:id="@+id/btn5"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="16dp"
-                    android:text="5"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    app:backgroundTint="#FFFFFF"
-                    app:layout_constraintStart_toEndOf="@+id/btn4"
-                    app:layout_constraintTop_toBottomOf="@+id/btn2"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    <Button
+                        android:id="@+id/btn5"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_40sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/btn4"
+                        app:layout_constraintTop_toBottomOf="@+id/btn2"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
-                <Button
-                    android:id="@+id/btn6"
-                    style="@style/CustomButtonStyle"
+                    <Button
+                        android:id="@+id/btn6"
+                        style="@style/CustomButtonStyle"
 
-                    android:layout_marginStart="16dp"
-                    android:text="6"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    app:backgroundTint="#FFFFFF"
-                    app:layout_constraintStart_toEndOf="@+id/btn5"
-                    app:layout_constraintTop_toBottomOf="@+id/btn3"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="6"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_40sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/btn5"
+                        app:layout_constraintTop_toBottomOf="@+id/btn3"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
-                <Button
-                    android:id="@+id/btn7"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="35dp"
-                    android:text="7"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    app:backgroundTint="#FFFFFF"
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linear3"
+                    app:layout_constraintTop_toBottomOf="@+id/linear2"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn4"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    tools:ignore="MissingConstraints">
+                    <Button
+                        android:id="@+id/btn7"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="0dp"
+                        android:text="7"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_40sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn4"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
-                <Button
-                    android:id="@+id/btn8"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="16dp"
-                    android:text="8"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    app:backgroundTint="#FFFFFF"
-                    app:layout_constraintStart_toEndOf="@+id/btn7"
-                    app:layout_constraintTop_toBottomOf="@+id/btn5"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    <Button
+                        android:id="@+id/btn8"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="8"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_40sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/btn7"
+                        app:layout_constraintTop_toBottomOf="@+id/btn5"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
-                <Button
-                    android:id="@+id/btn9"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="16dp"
-                    android:text="9"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    app:backgroundTint="#FFFFFF"
-                    app:layout_constraintStart_toEndOf="@+id/btn8"
-                    app:layout_constraintTop_toBottomOf="@+id/btn6"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    <Button
+                        android:id="@+id/btn9"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="9"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_40sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/btn8"
+                        app:layout_constraintTop_toBottomOf="@+id/btn6"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
-                <ImageButton
-                    android:id="@+id/btnAll"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginTop="8dp"
-                    android:src="@mipmap/list0"
-                    android:textColor="@color/black"
-                    app:backgroundTint="#FFFFFF"
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linear4"
+                    app:layout_constraintTop_toBottomOf="@+id/linear3"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn7" />
+                    tools:ignore="MissingConstraints">
 
-                <Button
-                    android:id="@+id/btn0"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="16dp"
-                    android:text="0"
-                    android:textColor="@color/black"
-                    app:backgroundTint="#FFFFFF"
-                    app:layout_constraintStart_toEndOf="@+id/btnAll"
-                    app:layout_constraintTop_toBottomOf="@+id/btn8"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    <ImageButton
+                        android:id="@+id/btnAll"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="0dp"
+                        android:src="@mipmap/list0"
+                        android:textColor="@color/black"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btn7" />
 
-                <Button
-                    android:id="@+id/btnX"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="16dp"
-                    android:text="X"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    app:backgroundTint="#FFFFFF"
-                    app:layout_constraintStart_toEndOf="@+id/btn0"
-                    app:layout_constraintTop_toBottomOf="@+id/btn9"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    <Button
+                        android:id="@+id/btn0"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/btnAll"
+                        app:layout_constraintTop_toBottomOf="@+id/btn8"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
-                <Button
-                    android:id="@+id/btnInvisible"
-                    style="@style/CustomButtonStyle"
-                    android:layout_marginStart="35dp"
-                    android:text="7"
-                    android:textColor="@color/black"
-                    android:textSize="40sp"
-                    android:visibility="invisible"
-                    app:backgroundTint="#FFFFFF"
+                    <Button
+                        android:id="@+id/btnX"
+                        style="@style/CustomButtonStyle"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="X"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_40sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintStart_toEndOf="@+id/btn0"
+                        app:layout_constraintTop_toBottomOf="@+id/btn9"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linear5"
+                    app:layout_constraintTop_toBottomOf="@+id/linear4"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnAll"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    tools:ignore="MissingConstraints">
 
-                <Button
-                    android:id="@+id/btnGo"
-                    style="@style/CustomButtonStyle"
-                    android:layout_centerInParent="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Go"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"
-                    app:backgroundTint="#FFFFFF"
-                    app:layout_constraintLeft_toRightOf="@+id/btnInvisible"
-                    app:layout_constraintTop_toBottomOf="@+id/btn0"
-                    app:strokeColor="#000000"
-                    app:strokeWidth="3dp" />
+                    <Button
+                        android:id="@+id/btnGo"
+                        style="@style/CustomButtonStyle"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:text="Go"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_25sdp"
+                        app:backgroundTint="#FFFFFF"
+                        app:layout_constraintLeft_toRightOf="@+id/btnInvisible"
+                        app:layout_constraintTop_toBottomOf="@+id/btn0"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="@dimen/_3sdp" />
 
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.constraintlayout.widget.Barrier
                     android:layout_width="wrap_content"
@@ -257,63 +289,63 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_begin="392dp" />
+                    app:layout_constraintGuide_begin="@dimen/_392sdp" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_begin="20dp" />
+                    app:layout_constraintGuide_begin="@dimen/_20sdp" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_end="20dp" />
+                    app:layout_constraintGuide_end="@dimen/_20sdp" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="95dp" />
+                    app:layout_constraintGuide_begin="@dimen/_95sdp" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="190dp" />
+                    app:layout_constraintGuide_begin="@dimen/_190sdp" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="475dp" />
+                    app:layout_constraintGuide_begin="@dimen/_475sdp" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="285dp" />
+                    app:layout_constraintGuide_begin="@dimen/_285sdp" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_begin="380dp" />
+                    app:layout_constraintGuide_begin="@dimen/_380sdp" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    app:layout_constraintGuide_begin="20dp" />
+                    app:layout_constraintGuide_begin="@dimen/_20sdp" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
