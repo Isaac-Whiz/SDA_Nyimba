@@ -100,46 +100,74 @@ require the user to either use the scroll view or key-in the hymn number to choo
 </details>
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
-# Contributing
+# Contributing ⏫
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what makes this an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Don't forget to give the project a 🌟 Thanks again!
 
-1. Fork the Project
+1. Fork the Project 
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your Changes (`git commit -m 'Added some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
-# License
+# License 🗞️
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the AGPL-3.0 License. See [`LICENSE.txt`](https://github.com/Isaac-Whiz/SDA_Nyimba?tab=AGPL-3.0-1-ov-file#) for more information.
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
-# Contact
+# Contact 📧 📱 🤙
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Ssekajja Wavamuno Isaac - [@your_twitter](https://twitter.com/your_username) - ssekajjawavamuno@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Isaac-Whiz/SDA_Nyimba](https://github.com/Isaac-Whiz/SDA_Nyimba)
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
 
-# Acknowledgments
+# Acknowledgments 🦾
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
+* [MeiCode](https://meicode.org/)
+* [SQLite](https://sqlite.org/download.html)
+* [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
+* [Intuit Sdp](https://github.com/intuit/sdp)
 * [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+
+<p align="right"><a href="#readme-top">Back to top</a></p>
+
+# Anxillary 🍂
+Below are the different skins of the application.
+* Main view.
+  <div>
+  <img src="url_to_image_1" alt="Image 1" width="50" height="50">
+</div>
+
+* Navigation view.
+    <div>
+  <img src="url_to_image_1" alt="Image 1" width="50" height="50">
+</div>
+
+* All hymns view
+    <div>
+  <img src="url_to_image_1" alt="Image 1" width="50" height="50">
+</div>
+
+* Others.....
+    <div>
+  <img src="url_to_image_1" alt="Image 1" width="50" height="50">
+</div>
+  <div>
+  <img src="url_to_image_1" alt="Image 1" width="50" height="50">
+</div>
+  <div>
+  <img src="url_to_image_1" alt="Image 1" width="50" height="50">
+</div>
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
