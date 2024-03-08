@@ -108,8 +108,6 @@ Project Link: [https://github.com/Isaac-Whiz/SDA_Nyimba](https://github.com/Isaa
 
 # Acknowledgments 🦾
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
 * [MeiCode](https://meicode.org/)
 * [Material Design](https://m2.material.io/design)
 * [SQLite](https://sqlite.org/download.html)
